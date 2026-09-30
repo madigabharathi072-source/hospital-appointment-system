@@ -1,0 +1,54 @@
+import java.util.*;
+
+class Patient {
+    String name;
+    int age;
+    String problem;
+
+    Patient(String name, int age, String problem) {
+        this.name = name;
+        this.age = age;
+        this.problem = problem;
+    }
+
+    void display() {
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+        System.out.println("Problem: " + problem);
+        System.out.println("--------------------");
+    }
+}
+
+public class HospitalAppointment {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        Queue<Patient> patients = new LinkedList<>();
+
+        System.out.println("=== HOSPITAL APPOINTMENT SYSTEM ===");
+
+        System.out.print("Enter patient name: ");
+        String name = sc.nextLine();
+
+        System.out.print("Enter patient age: ");
+        int age = sc.nextInt();
+        sc.nextLine();
+
+        System.out.print("Enter problem: ");
+        String problem = sc.nextLine();
+
+        Patient p = new Patient(name, age, problem);
+
+        patients.add(p);
+
+        System.out.println("\nAppointment booked successfully!");
+
+        System.out.println("\nNext Patient:");
+        Patient next = patients.poll();
+
+        next.display();
+
+        sc.close();
+    }
+}
