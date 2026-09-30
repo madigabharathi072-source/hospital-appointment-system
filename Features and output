@@ -1,0 +1,23 @@
+Main Features:
+
+Add patient
+Book appointment
+View appointment list
+Call the next patient
+Display patient details
+
+output:
+
+=== HOSPITAL APPOINTMENT SYSTEM ===
+
+Enter patient name: Lalitha
+Enter patient age: 20
+Enter problem: Fever
+
+Appointment booked successfully!
+
+Next Patient:
+Name: Lalitha
+Age: 20
+Problem: Fever
+--------------------
